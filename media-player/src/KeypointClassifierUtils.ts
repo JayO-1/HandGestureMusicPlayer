@@ -81,7 +81,7 @@ export class GestureBuffer {
 
 // Ordered by class i.e. class 0 = Play, class 1 = Pause, etc
 const labels = [GestureLabels.Play, GestureLabels.Pause, GestureLabels.IncreaseVolume, GestureLabels.Mute,
-    GestureLabels.DecreaseVolume, GestureLabels.Knuckles, GestureLabels.PreviousSong, GestureLabels.NextSong]
+    GestureLabels.DecreaseVolume, GestureLabels.PreviousSong, GestureLabels.NextSong]
 const buffer = new GestureBuffer()
 
 export function calcLandmarkList(landmarks: Hands.LandmarkList) {
@@ -131,8 +131,17 @@ export function preprocessLandmark(landmarkList: Array<Array<number>>) {
 
 export function inference(model: tf.GraphModel, landmarks: Array<number>) {
     const inputTensor: tf.Tensor2D = tf.tensor2d(landmarks, [1, landmarks.length])
+
+    const timeBefore = Date.now()
+    console.log("Time before inference " + timeBefore)
+
     const resultTensor = (model.predict(inputTensor) as tf.Tensor)
     const resultTensorData = resultTensor.dataSync()
+
+    const timeAfter = Date.now()
+    console.log("Time after inference " + timeAfter)
+
+    console.log("Inference Time (ms): " + (timeAfter - timeBefore))
 
     const predictions = Array.from(resultTensorData)
     const predictedId = predictions.indexOf(Math.max(...predictions))

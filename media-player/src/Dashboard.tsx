@@ -15,6 +15,7 @@ import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import PlaylistPlayIcon from '@mui/icons-material/PlaylistPlay';
+import Tooltip from '@mui/material/Tooltip';
 
 import Player from './Player';
 import TrackSearchResult from './TrackSearchResult';
@@ -246,9 +247,11 @@ function Dashboard(props: AuthCodeProps) {
               spacing={0}
               justifyContent="center"
             >
-              <IconButton aria-label="get-playlists" onClick={getPlaylists}>
-                <PlaylistPlayIcon fontSize="large"/>
-              </IconButton>
+              <Tooltip title="Get Playlists">
+                <IconButton aria-label="get-playlists" onClick={getPlaylists}>
+                  <PlaylistPlayIcon fontSize="large"/>
+                </IconButton>
+              </Tooltip>
             </Stack>
           </div>
 

@@ -7,6 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import QueueIcon from '@mui/icons-material/Queue';
+import Tooltip from '@mui/material/Tooltip';
 
 import { Track } from './common/types';
 
@@ -33,14 +34,18 @@ function TrackSearchResult(props: Track) {
                 </Typography>
             </CardContent>
             <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-                <IconButton aria-label="play/pause" onClick={handlePlay}>
-                    <PlayArrowIcon sx={{ height: 38, width: 38 }} />
-                </IconButton>
+                <Tooltip title="Play">
+                    <IconButton aria-label="play/pause" onClick={handlePlay}>
+                        <PlayArrowIcon sx={{ height: 38, width: 38 }} />
+                    </IconButton>
+                </Tooltip>
                 {
                     !track.isPlaylist &&
-                    <IconButton aria-label="addToQueue" onClick={handleEnqueue}>
+                    <Tooltip title="Add to Queue">
+                        <IconButton aria-label="addToQueue" onClick={handleEnqueue}>
                         <QueueIcon sx={{ height: 38, width: 38 }} />
-                    </IconButton>
+                        </IconButton>
+                    </Tooltip>
                 }
             </Box>
         </Box>
