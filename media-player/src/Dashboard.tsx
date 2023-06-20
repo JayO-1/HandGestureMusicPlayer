@@ -172,22 +172,23 @@ function Dashboard(props: AuthCodeProps) {
       })
       .then(res => {
         if (!res.data.items) return
-
+        
         setSearchResults(
         res.data.items.map((playlist: any) => {
-            const smallestPlaylistImage = playlist.images.reduce(
+          const smallestPlaylistImage = playlist.images.reduce(
             (smallest: any, image: any) => {
-                if (image.height && smallest.height && image.height < smallest.height) return image
-                return smallest
+              console.log(image)
+              if (image.height && smallest.height && image.height < smallest.height) return image
+              return smallest
             },
             playlist.images[0]
             )
-
+            
             return {
             artist: playlist.owner.display_name,
             title: playlist.name,
             uri: playlist.uri,
-            albumUrl: smallestPlaylistImage.url,
+            ...(smallestPlaylistImage ? { albumUrl: smallestPlaylistImage.url } : {}),
             isPlaylist: true
             }
         }))

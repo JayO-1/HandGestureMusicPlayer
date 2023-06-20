@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const rateLimit = require('express-rate-limit')
 const axios = require('axios');
 const SpotifyWebApi = require('spotify-web-api-node');
+require('dotenv').config();
 
 const app = express()
 app.use(cors())
@@ -28,8 +29,8 @@ app.post('/login', (req, res) => {
 
     const spotifyApi = new SpotifyWebApi({
         redirectUri: 'http://localhost:3000/media-player',
-        clientId: 'd92d7da8148c48ad9f5712f3ad7bdba2',
-        clientSecret: 'afb703f8114145818592c5cc18ca69ec'
+        clientId: process.env.CLIENT_ID,
+        clientSecret: process.env.CLIENT_SECRET
     })
 
     spotifyApi
@@ -54,8 +55,8 @@ app.post('/refresh', (req, res) => {
 
     const spotifyApi = new SpotifyWebApi({
         redirectUri: 'http://localhost:3000/media-player',
-        clientId: 'd92d7da8148c48ad9f5712f3ad7bdba2',
-        clientSecret: 'afb703f8114145818592c5cc18ca69ec',
+        clientId: process.env.CLIENT_ID,
+        clientSecret: process.env.CLIENT_SECRET,
         refreshToken: refreshToken
     })
 
@@ -80,8 +81,8 @@ app.post('/searchTrack', (req, res) => {
 
     const spotifyApi = new SpotifyWebApi({
         redirectUri: 'http://localhost:3000/media-player',
-        clientId: 'd92d7da8148c48ad9f5712f3ad7bdba2',
-        clientSecret: 'afb703f8114145818592c5cc18ca69ec'
+        clientId: process.env.CLIENT_ID,
+        clientSecret: process.env.CLIENT_SECRET
     })
 
     spotifyApi.setAccessToken(accessToken)
@@ -160,8 +161,8 @@ app.post('/handleGesture', async (req, res) => {
 
     const spotifyApi = new SpotifyWebApi({
         redirectUri: 'http://localhost:3000/media-player',
-        clientId: 'd92d7da8148c48ad9f5712f3ad7bdba2',
-        clientSecret: 'afb703f8114145818592c5cc18ca69ec'
+        clientId: process.env.CLIENT_ID,
+        clientSecret: process.env.CLIENT_SECRET
     })
 
     spotifyApi.setAccessToken(accessToken)
