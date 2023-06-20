@@ -16,6 +16,8 @@ Contains a Jupyter notebook with some basic experimentation for hand pose estima
 
 More detail about this project can be found in my [dissertation](https://www.overleaf.com/read/spnxstqsgfzh)
 
+## Instructions
+
 To try it out:
 1. Switch to the 'GestureRecognition' branch
 2. Run 'npm start' within mp-server
