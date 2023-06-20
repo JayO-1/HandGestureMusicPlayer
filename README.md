@@ -18,7 +18,6 @@ More detail about this project can be found in my [dissertation](https://www.ove
 
 ## Instructions
 
-To try it out:
 1. Switch to the 'GestureRecognition' branch
 2. Run 'npm start' within mp-server
 3. Run 'npm start' within media-player/src
