@@ -1,6 +1,6 @@
 # HandGestureMusicPlayer
-Music Player for Spotify controlled using Hand Gesture Recognition, using MediaPipe for feature extraction and a simple Neural Network for classification.
-Created for Final Year Computer Science Project at the University of Manchester
+A music player for Spotify that is controlled using hand gesture recognition, using MediaPipe for hand feature extraction and a simple Neural Network for classification, created with TensorFlow.
+Built for my Final Year Computer Science Dissertation at the University of Manchester.
 
 ## Repo Structure
 
@@ -16,8 +16,9 @@ Contains a Jupyter notebook with some basic experimentation for hand pose estima
 
 More detail about this project can be found in my [dissertation](https://www.overleaf.com/read/spnxstqsgfzh)
 
-## Instructions
+## Startup Instructions
 
-1. Switch to the 'GestureRecognition' branch
-2. Run 'npm start' within mp-server
-3. Run 'npm start' within media-player/src
+1. Clone the repo
+2. Switch to the 'GestureRecognition' branch
+3. Run 'npm start' within mp-server
+4. Run 'npm start' within media-player/src
