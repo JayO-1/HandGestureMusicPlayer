@@ -33,3 +33,16 @@ More details about this project can be found in my [dissertation](https://www.ov
 4. Run 'npm install' within mp-server and media-player/src to install the required dependencies
 5. Run 'npm start' within mp-server
 6. Run 'npm start' within media-player/src
+
+Once you complete step 6, you will see this screen:
+
+<img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/Disso%20homepage.png?raw=true" alt="Homepage" width="1000" height="500">
+
+The instructions page will explain how to use the app, and the available gestures can be seen below:
+
+<img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/available_hand_gestures.png?raw=true" alt="Hand Gestures" width="1000" height="500">
+
+If you wish to skip the instructions and go straight to using the app, simply login to your Spotify account and
+you will be redirected to the music player:
+
+<img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/Disso%20Media%20Player%20Page.png?raw=true" alt="Media Player Page" width="1000" height="500">
