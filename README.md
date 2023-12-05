@@ -40,9 +40,9 @@ Once you complete step 6, you will see this screen:
 
 The instructions page will explain how to use the app, and the available gestures can be seen below:
 
-<img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/available_hand_gestures.png?raw=true" alt="Hand Gestures" width="1000" height="500">
+<img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/available_hand_gestures-removebg-preview.png?raw=true" alt="Hand Gestures" width="800" height="500">
 
 If you wish to skip the instructions and go straight to using the app, simply login to your Spotify account and
 you will be redirected to the music player:
 
-<img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/Disso%20Media%20Player%20Page.png?raw=true" alt="Media Player Page" width="1000" height="500">
+<img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/Disso%20Media%20Player%20Page.png?raw=true" alt="Media Player Page" width="800" height="500">
