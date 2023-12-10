@@ -46,3 +46,5 @@ If you wish to skip the instructions and go straight to using the app, simply lo
 you will be redirected to the music player:
 
 <img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/Disso%20Media%20Player%20Page.png?raw=true" alt="Media Player Page" width="900" height="500">
+
+## Demo
