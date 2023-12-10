@@ -29,10 +29,10 @@ More details about this project can be found in my [dissertation](https://www.ov
 
 1. Install Node.js [here](https://nodejs.org/en/download)
 2. Clone the repo
-3. Switch to the 'GestureRecognition' branch
-4. Run `npm install` within mp-server and media-player/src to install the required dependencies
-5. Run `npm start` within mp-server
-6. Run `npm start` within media-player/src
+3. Switch to the **GestureRecognition** branch
+4. Run `npm install` within **mp-server** and **media-player/src** to install the required dependencies
+5. Run `npm start` within **mp-server**
+6. Run `npm start` within **media-player/src**
 
 Once you complete step 6, you will see this screen:
 
