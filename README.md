@@ -14,7 +14,7 @@ Contains a Jupyter notebook with some basic experimentation for hand pose estima
 - media-player/: Folder containing the media player itself, in the form of a React Web App
 - mp-server/: The backend of the media player, where calls are made to the Spotify API for playback control
 
-### System Architecture
+## System Architecture
 
 <img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/Disso%20Final%20Design.drawio.png?raw=true" alt="Architecture Diagram" width="1000" height="500">
 
@@ -27,12 +27,12 @@ More details about this project can be found in my [dissertation](https://www.ov
 
 ## Startup Instructions
 
-1. Install Node.js
+1. Install Node.js [here](https://nodejs.org/en/download)
 2. Clone the repo
 3. Switch to the 'GestureRecognition' branch
-4. Run 'npm install' within mp-server and media-player/src to install the required dependencies
-5. Run 'npm start' within mp-server
-6. Run 'npm start' within media-player/src
+4. Run `npm install` within mp-server and media-player/src to install the required dependencies
+5. Run `npm start` within mp-server
+6. Run `npm start` within media-player/src
 
 Once you complete step 6, you will see this screen:
 
