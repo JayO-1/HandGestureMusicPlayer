@@ -49,7 +49,7 @@ jest.mock('./components/media-player/MediaPlayer', () => {
   }
 });
 
-test('Should navbar, copyright and home page on default route', () => {
+test('Should render navbar, copyright and home page on default route', () => {
   // Act
   render(
   <MemoryRouter>
@@ -64,7 +64,7 @@ test('Should navbar, copyright and home page on default route', () => {
 });
 
 
-test('Should navbar, copyright and instructions page on instructions route', () => {
+test('Should render navbar, copyright and instructions page on instructions route', () => {
   // Act
   render(
     <MemoryRouter initialEntries={['/instructions']}>
@@ -78,7 +78,7 @@ test('Should navbar, copyright and instructions page on instructions route', () 
   expect(screen.getByTestId("CopyrightMock")).toBeInTheDocument();
 });
 
-test('Should navbar, copyright and media player page on media player route', () => {
+test('Should render navbar, copyright and media player page on media player route', () => {
   // Act
   render(
     <MemoryRouter initialEntries={['/media-player']}>
