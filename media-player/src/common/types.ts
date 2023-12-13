@@ -6,6 +6,10 @@ export interface AuthCodeProps {
     code: string
 }
 
+export interface SearchParams {
+    code: string | null
+}
+
 export interface PlayerProps {
     accessToken: string | undefined,
     trackUri: string | undefined

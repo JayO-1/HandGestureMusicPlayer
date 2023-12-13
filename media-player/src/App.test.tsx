@@ -40,24 +40,22 @@ jest.mock('./components/instructions/Instructions', () => {
   }
 });
 
-jest.mock('./components/media-player/MediaPlayer', () => {
+jest.mock('./components/media-player/URLParser', () => {
   return {
     __esModule: true,
     default: () => {
-      return <div data-testid="MediaPlayerMock" />;
+      return <div data-testid="URLParserMock" />;
     }
   }
 });
 
 test('Should render navbar, copyright and home page on default route', () => {
-  // Act
   render(
   <MemoryRouter>
     <App/>
   </MemoryRouter>
   );
 
-  // Assert
   expect(screen.getByTestId("NavbarMock")).toBeInTheDocument();
   expect(screen.getByTestId("HomePageMock")).toBeInTheDocument();
   expect(screen.getByTestId("CopyrightMock")).toBeInTheDocument();
@@ -65,29 +63,25 @@ test('Should render navbar, copyright and home page on default route', () => {
 
 
 test('Should render navbar, copyright and instructions page on instructions route', () => {
-  // Act
   render(
     <MemoryRouter initialEntries={['/instructions']}>
       <App/>
     </MemoryRouter>
   );
 
-  // Assert
   expect(screen.getByTestId("NavbarMock")).toBeInTheDocument();
   expect(screen.getByTestId("InstructionsPageMock")).toBeInTheDocument();
   expect(screen.getByTestId("CopyrightMock")).toBeInTheDocument();
 });
 
 test('Should render navbar, copyright and media player page on media player route', () => {
-  // Act
   render(
     <MemoryRouter initialEntries={['/media-player']}>
       <App/>
     </MemoryRouter>
   );
 
-  // Assert
   expect(screen.getByTestId("NavbarMock")).toBeInTheDocument();
-  expect(screen.getByTestId("MediaPlayerMock")).toBeInTheDocument();
+  expect(screen.getByTestId("URLParserMock")).toBeInTheDocument();
   expect(screen.getByTestId("CopyrightMock")).toBeInTheDocument();
 });

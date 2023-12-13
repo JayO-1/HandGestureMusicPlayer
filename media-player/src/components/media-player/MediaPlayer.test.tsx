@@ -1,19 +1,36 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import { InstructionStep } from '../../common/types';
-// import InstructionCard from "./InstructionCard";
+import Dashboard from './Dashboard';
+import MediaPlayer from './MediaPlayer';
 
-test('renders learn react link', () => {
-    const instruction: InstructionStep = {
-      title: "Test Instruction",
-      description: "testing123",
-      imgPath: "",
-      imgWidth: "",
-      imgHeight: "",
-      imgAlt: "no image"
+jest.mock("./Dashboard", () => {
+    return {
+      __esModule: true,
+      default: () => {
+        return <div data-testid="DashboardMock" />;
+      }
     }
-    // render(<InstructionCard {...instruction} />);
-    // const linkElement = screen.getByText(/learn react/i);
-    // expect(linkElement).toBeInTheDocument();
-  });
+});
+
+test('Should render Dashboard if code is included in url', () => {
+    const code = '123';
+
+    render(
+    <MediaPlayer code={code}/>
+    );
+
+    const dashboard = screen.getByTestId("DashboardMock");
+    expect(dashboard).toBeInTheDocument();
+});
+
+test('Should render error message if code isn\'t included in url', () => {
+    const code = null;
+
+    render(
+    <MediaPlayer code={code}/>
+    );
+
+    const errorMsg = screen.getByText("Error");
+    expect(errorMsg).toBeInTheDocument();
+});

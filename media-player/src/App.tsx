@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
 import Instructions from './components/instructions/Instructions';
-import MediaPlayer from './components/media-player/MediaPlayer';
+import URLParser from './components/media-player/URLParser';
 import Copyright from './components/copyright/Copyright';
 
 import { AUTH_URL } from './common/constants';
@@ -28,7 +28,7 @@ function App() {
           </Route>
 
           <Route exact path="/media-player">
-            <MediaPlayer />
+            <URLParser />
           </Route>
         </Switch>
       </main>
