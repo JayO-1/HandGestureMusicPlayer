@@ -13,24 +13,26 @@ jest.mock("./Dashboard", () => {
     }
 });
 
-test('Should render Dashboard if code is included in url', () => {
-    const code = '123';
+describe('MediaPlayer', () => {
+    test('Should render Dashboard if code is included in url', () => {
+        const code = '123';
 
-    render(
-    <MediaPlayer code={code}/>
-    );
+        render(
+        <MediaPlayer code={code}/>
+        );
 
-    const dashboard = screen.getByTestId("DashboardMock");
-    expect(dashboard).toBeInTheDocument();
-});
+        const dashboard = screen.getByTestId("DashboardMock");
+        expect(dashboard).toBeInTheDocument();
+    });
 
-test('Should render error message if code isn\'t included in url', () => {
-    const code = null;
+    test('Should render error message if code isn\'t included in url', () => {
+        const code = null;
 
-    render(
-    <MediaPlayer code={code}/>
-    );
+        render(
+        <MediaPlayer code={code}/>
+        );
 
-    const errorMsg = screen.getByText("Error");
-    expect(errorMsg).toBeInTheDocument();
-});
+        const errorMsg = screen.getByText("Error");
+        expect(errorMsg).toBeInTheDocument();
+    });
+})

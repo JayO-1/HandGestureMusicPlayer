@@ -49,39 +49,41 @@ jest.mock('./components/media-player/URLParser', () => {
   }
 });
 
-test('Should render navbar, copyright and home page on default route', () => {
-  render(
-  <MemoryRouter>
-    <App/>
-  </MemoryRouter>
-  );
-
-  expect(screen.getByTestId("NavbarMock")).toBeInTheDocument();
-  expect(screen.getByTestId("HomePageMock")).toBeInTheDocument();
-  expect(screen.getByTestId("CopyrightMock")).toBeInTheDocument();
-});
-
-
-test('Should render navbar, copyright and instructions page on instructions route', () => {
-  render(
-    <MemoryRouter initialEntries={['/instructions']}>
+describe('App', () => {
+  test('Should render navbar, copyright and home page on default route', () => {
+    render(
+    <MemoryRouter>
       <App/>
     </MemoryRouter>
-  );
-
-  expect(screen.getByTestId("NavbarMock")).toBeInTheDocument();
-  expect(screen.getByTestId("InstructionsPageMock")).toBeInTheDocument();
-  expect(screen.getByTestId("CopyrightMock")).toBeInTheDocument();
-});
-
-test('Should render navbar, copyright and media player page on media player route', () => {
-  render(
-    <MemoryRouter initialEntries={['/media-player']}>
-      <App/>
-    </MemoryRouter>
-  );
-
-  expect(screen.getByTestId("NavbarMock")).toBeInTheDocument();
-  expect(screen.getByTestId("URLParserMock")).toBeInTheDocument();
-  expect(screen.getByTestId("CopyrightMock")).toBeInTheDocument();
-});
+    );
+  
+    expect(screen.getByTestId("NavbarMock")).toBeInTheDocument();
+    expect(screen.getByTestId("HomePageMock")).toBeInTheDocument();
+    expect(screen.getByTestId("CopyrightMock")).toBeInTheDocument();
+  });
+  
+  
+  test('Should render navbar, copyright and instructions page on instructions route', () => {
+    render(
+      <MemoryRouter initialEntries={['/instructions']}>
+        <App/>
+      </MemoryRouter>
+    );
+  
+    expect(screen.getByTestId("NavbarMock")).toBeInTheDocument();
+    expect(screen.getByTestId("InstructionsPageMock")).toBeInTheDocument();
+    expect(screen.getByTestId("CopyrightMock")).toBeInTheDocument();
+  });
+  
+  test('Should render navbar, copyright and url parser on media player route', () => {
+    render(
+      <MemoryRouter initialEntries={['/media-player']}>
+        <App/>
+      </MemoryRouter>
+    );
+  
+    expect(screen.getByTestId("NavbarMock")).toBeInTheDocument();
+    expect(screen.getByTestId("URLParserMock")).toBeInTheDocument();
+    expect(screen.getByTestId("CopyrightMock")).toBeInTheDocument();
+  });
+})
