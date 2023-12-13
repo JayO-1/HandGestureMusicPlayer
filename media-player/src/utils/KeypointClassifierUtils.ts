@@ -1,7 +1,7 @@
 import * as Hands from "@mediapipe/hands";
 import * as tf from '@tensorflow/tfjs';
-import { CAM_WIDTH, CAM_HEIGHT } from "./common/constants";
-import { FrequencyMap, QueueArray, GestureLabels } from "./common/types";
+import { CAM_WIDTH, CAM_HEIGHT } from "../common/constants";
+import { FrequencyMap, QueueArray, GestureLabels } from "../common/types";
 
 class Queue {
     items: QueueArray

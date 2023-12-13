@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { AuthURLProps } from './common/types';
+import { AuthURLProps } from '../../common/types';
 
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';

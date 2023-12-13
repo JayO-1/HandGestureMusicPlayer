@@ -18,10 +18,10 @@ import PlaylistPlayIcon from '@mui/icons-material/PlaylistPlay';
 import Tooltip from '@mui/material/Tooltip';
 
 import Player from './Player';
-import TrackSearchResult from './TrackSearchResult';
+import TrackSearchResult from '../../TrackSearchResult';
 import GestureControl from './GestureControl';
-import { AuthCodeProps, SongSearchResult } from './common/types';
-import useAuth from './hooks/useAuth';
+import { AuthCodeProps, SongSearchResult } from '../../common/types';
+import useAuth from '../../hooks/useAuth';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',

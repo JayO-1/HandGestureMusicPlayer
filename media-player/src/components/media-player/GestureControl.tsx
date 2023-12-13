@@ -8,9 +8,9 @@ import * as cam from "@mediapipe/camera_utils";
 import * as mp_drawing from "@mediapipe/drawing_utils";
 import * as tf from '@tensorflow/tfjs';
 
-import { calcLandmarkList, preprocessLandmark, inference } from './KeypointClassifierUtils';
-import { CAM_WIDTH, CAM_HEIGHT } from "./common/constants";
-import { GestureControlProps, VolumeLevels, GestureLabels } from "./common/types";
+import { calcLandmarkList, preprocessLandmark, inference } from '../../utils/KeypointClassifierUtils';
+import { CAM_WIDTH, CAM_HEIGHT } from "../../common/constants";
+import { GestureControlProps, VolumeLevels, GestureLabels } from "../../common/types";
 
 function getLowerVolume(oldVolume: VolumeLevels): VolumeLevels | null {
     if (oldVolume === VolumeLevels.Muted) return null

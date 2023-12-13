@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-import { InstructionStep } from './common/types';
+import { InstructionStep } from '../../common/types';
 
 export default function InstructionCard(props: InstructionStep) {
   const instructionTitle: string = props.title

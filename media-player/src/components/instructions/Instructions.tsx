@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 import InstructionCard from './InstructionCard';
-import { InstructionSteps } from './common/types';
+import { InstructionSteps } from '../../common/types';
 
 const userInstructions: InstructionSteps = [
   {
@@ -71,7 +71,7 @@ function Instructions() {
         </Grid>
 
         {userInstructions.map(instruction => {
-          return <Grid item xs={3}> <InstructionCard {...instruction} /> </Grid>
+          return <Grid key={instruction.title} item xs={3}> <InstructionCard {...instruction} /> </Grid>
         })}
       </Grid>
     </Box>
