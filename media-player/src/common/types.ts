@@ -78,5 +78,6 @@ export interface EndpointURIs {
     REFRESH: string,
     SEARCH_TRACK: string,
     ADD_TO_QUEUE: string,
-    GET_PLAYLISTS: string
+    GET_PLAYLISTS: string,
+    HANDLE_GESTURE: string
 }

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 // @ts-ignore
 import SpotifyPlayer from 'react-spotify-web-playback';
 
-import { PlayerProps } from '../../../common/types'
+import { PlayerProps } from '../../../common/types';
 
 function Player(props: PlayerProps) {
     const accessToken: string | undefined = props.accessToken

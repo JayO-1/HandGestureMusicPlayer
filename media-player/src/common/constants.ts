@@ -13,5 +13,6 @@ export const ENDPOINTS: EndpointURIs = {
     REFRESH: "http://localhost:3001/refresh",
     SEARCH_TRACK: "http://localhost:3001/searchTrack",
     ADD_TO_QUEUE: "http://localhost:3001/addToQueue",
-    GET_PLAYLISTS: "http://localhost:3001/getPlaylists"
+    GET_PLAYLISTS: "http://localhost:3001/getPlaylists",
+    HANDLE_GESTURE: "http://localhost:3001/handleGesture"
 }

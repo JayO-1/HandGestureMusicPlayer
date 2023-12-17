@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 
 import { styled, alpha } from '@mui/material/styles';
@@ -104,45 +104,46 @@ function Dashboard(props: AuthCodeProps) {
     };
 
     useEffect(() => {
-        if (!search) return setSearchResults([])
-        if (!accessToken) return
+      if (!search && searchResults.length && searchResults[0].isPlaylist) return
+      if (!search) return setSearchResults([])
+      if (!accessToken) return
 
-        let cancel: boolean = false
-        axios
-        .post(ENDPOINTS.SEARCH_TRACK, {
-          trackName: search,
-          accessToken
-        })
-        .then(res => {
-            if (!res.data.body.tracks) return
-            if (cancel) return
+      let cancel: boolean = false
+      axios
+      .post(ENDPOINTS.SEARCH_TRACK, {
+        trackName: search,
+        accessToken
+      })
+      .then(res => {
+          if (!res.data.body.tracks) return
+          if (cancel) return
 
-            setSearchResults(
-            res.data.body.tracks.items.map((track: any) => {
-                const smallestAlbumImage = track.album.images.reduce(
-                (smallest: any, image: any) => {
-                    if (image.height && smallest.height && image.height < smallest.height) return image
-                    return smallest
-                },
-                track.album.images[0]
-                )
+          setSearchResults(
+          res.data.body.tracks.items.map((track: any) => {
+              const smallestAlbumImage = track.album.images.reduce(
+              (smallest: any, image: any) => {
+                  if (image.height && smallest.height && image.height < smallest.height) return image
+                  return smallest
+              },
+              track.album.images[0]
+              )
 
-                return {
-                artist: track.artists[0].name,
-                title: track.name,
-                uri: track.uri,
-                albumUrl: smallestAlbumImage.url,
-                isPlaylist: false
-                }
-            }))
-        })
-        .catch(err => {
-            console.log(err)
-        })
+              return {
+              artist: track.artists[0].name,
+              title: track.name,
+              uri: track.uri,
+              albumUrl: smallestAlbumImage.url,
+              isPlaylist: false
+              }
+          }))
+      })
+      .catch(err => {
+          console.log(err)
+      })
 
-        return () => { 
-          cancel = true
-        };
+      return () => { 
+        cancel = true
+      };
     }, [search, accessToken])
 
     useEffect(() => {
@@ -178,7 +179,6 @@ function Dashboard(props: AuthCodeProps) {
         res.data.items.map((playlist: any) => {
           const smallestPlaylistImage = playlist.images.reduce(
             (smallest: any, image: any) => {
-              console.log(image)
               if (image.height && smallest.height && image.height < smallest.height) return image
               return smallest
             },

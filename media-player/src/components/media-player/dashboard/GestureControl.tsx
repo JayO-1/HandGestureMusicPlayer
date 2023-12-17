@@ -9,7 +9,7 @@ import * as mp_drawing from "@mediapipe/drawing_utils";
 import * as tf from '@tensorflow/tfjs';
 
 import { calcLandmarkList, preprocessLandmark, inference } from '../../../utils/KeypointClassifierUtils';
-import { CAM_WIDTH, CAM_HEIGHT } from "../../../common/constants";
+import { CAM_WIDTH, CAM_HEIGHT, ENDPOINTS } from "../../../common/constants";
 import { GestureControlProps, VolumeLevels, GestureLabels } from "../../../common/types";
 
 function getLowerVolume(oldVolume: VolumeLevels): VolumeLevels | null {
@@ -218,7 +218,7 @@ function GestureControl(props: GestureControlProps) {
     }
     
     axios
-    .post("http://localhost:3001/handleGesture", data)
+    .post(ENDPOINTS.HANDLE_GESTURE, data)
     .then(onSuccess)
     .catch(onFailure)
   }, [gesture]);
