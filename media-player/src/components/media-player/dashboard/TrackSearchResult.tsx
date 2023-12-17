@@ -9,7 +9,7 @@ import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import QueueIcon from '@mui/icons-material/Queue';
 import Tooltip from '@mui/material/Tooltip';
 
-import { Track } from './common/types';
+import { Track } from '../../../common/types';
 
 function TrackSearchResult(props: Track) {
     const track = props.track

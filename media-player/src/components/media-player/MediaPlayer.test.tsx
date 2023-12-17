@@ -1,10 +1,9 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import Dashboard from './Dashboard';
 import MediaPlayer from './MediaPlayer';
 
-jest.mock("./Dashboard", () => {
+jest.mock('./dashboard/Dashboard', () => {
     return {
       __esModule: true,
       default: () => {

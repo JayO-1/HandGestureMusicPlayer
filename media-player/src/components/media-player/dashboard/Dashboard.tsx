@@ -18,10 +18,11 @@ import PlaylistPlayIcon from '@mui/icons-material/PlaylistPlay';
 import Tooltip from '@mui/material/Tooltip';
 
 import Player from './Player';
-import TrackSearchResult from '../../TrackSearchResult';
+import TrackSearchResult from './TrackSearchResult';
 import GestureControl from './GestureControl';
-import { AuthCodeProps, SongSearchResult } from '../../common/types';
-import useAuth from '../../hooks/useAuth';
+import { AuthCodeProps, SongSearchResult } from '../../../common/types';
+import useAuth from '../../../hooks/useAuth';
+import { ENDPOINTS } from '../../../common/constants';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -108,7 +109,7 @@ function Dashboard(props: AuthCodeProps) {
 
         let cancel: boolean = false
         axios
-        .post("http://localhost:3001/searchTrack", {
+        .post(ENDPOINTS.SEARCH_TRACK, {
           trackName: search,
           accessToken
         })
@@ -149,7 +150,7 @@ function Dashboard(props: AuthCodeProps) {
       if (!accessToken) return
 
       axios
-      .post("http://localhost:3001/addToQueue", {
+      .post(ENDPOINTS.ADD_TO_QUEUE, {
         accessToken,
         trackUri: nextPlayingTrack.uri
       })
@@ -167,7 +168,7 @@ function Dashboard(props: AuthCodeProps) {
       if (!accessToken) return
 
       axios
-      .post("http://localhost:3001/getPlaylists", {
+      .post(ENDPOINTS.GET_PLAYLISTS, {
         accessToken
       })
       .then(res => {
@@ -204,26 +205,26 @@ function Dashboard(props: AuthCodeProps) {
         <div>
           <AppBar position="static">
             <Toolbar sx={{ background: '#1DB954' }}>
-            <MusicNoteIcon sx={{ mr: 2 }} />
-            <Typography
-                variant="h6"
-                noWrap
-                component="div"
-                sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-            >
-                Powered By Spotify
-            </Typography>
-            <Search>
-                <SearchIconWrapper>
-                  <SearchIcon />
-                </SearchIconWrapper>
-                <StyledInputBase 
-                  placeholder="Search Songs" 
-                  inputProps={{ 'aria-label': 'search' }} 
-                  value={search} 
-                  onChange={e => setSearch(e.target.value)}
-                />
-            </Search>
+              <MusicNoteIcon sx={{ mr: 2 }} />
+              <Typography
+                  variant="h6"
+                  noWrap
+                  component="div"
+                  sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+              >
+                  Powered By Spotify
+              </Typography>
+              <Search>
+                  <SearchIconWrapper>
+                    <SearchIcon />
+                  </SearchIconWrapper>
+                  <StyledInputBase 
+                    placeholder="Search Songs" 
+                    inputProps={{ 'aria-label': 'search' }} 
+                    value={search} 
+                    onChange={e => setSearch(e.target.value)}
+                  />
+              </Search>
             </Toolbar>
           </AppBar>
 
@@ -235,7 +236,7 @@ function Dashboard(props: AuthCodeProps) {
             sx={{ margin: '10px' }}
           >
             {searchResults.map(track => {
-              return <Grid item xs={3}> <TrackSearchResult track={track} key={track.uri} chooseTrack={chooseTrack} addToQueue={setNextTrack}/> </Grid>
+              return <Grid key={"grid" + track.uri} item xs={3}> <TrackSearchResult track={track} key={track.uri} chooseTrack={chooseTrack} addToQueue={setNextTrack}/> </Grid>
             })}
           </Grid>
 

@@ -56,10 +56,13 @@ describe('App', () => {
       <App/>
     </MemoryRouter>
     );
-  
-    expect(screen.getByTestId("NavbarMock")).toBeInTheDocument();
-    expect(screen.getByTestId("HomePageMock")).toBeInTheDocument();
-    expect(screen.getByTestId("CopyrightMock")).toBeInTheDocument();
+
+    const navbar = screen.getByTestId("NavbarMock");
+    const homePage = screen.getByTestId("HomePageMock");
+    const copyright = screen.getByTestId("CopyrightMock");
+    expect(navbar).toBeInTheDocument();
+    expect(homePage).toBeInTheDocument();
+    expect(copyright).toBeInTheDocument();
   });
   
   
@@ -70,9 +73,12 @@ describe('App', () => {
       </MemoryRouter>
     );
   
-    expect(screen.getByTestId("NavbarMock")).toBeInTheDocument();
-    expect(screen.getByTestId("InstructionsPageMock")).toBeInTheDocument();
-    expect(screen.getByTestId("CopyrightMock")).toBeInTheDocument();
+    const navbar = screen.getByTestId("NavbarMock");
+    const instructionsPage = screen.getByTestId("InstructionsPageMock");
+    const copyright = screen.getByTestId("CopyrightMock");
+    expect(navbar).toBeInTheDocument();
+    expect(instructionsPage).toBeInTheDocument();
+    expect(copyright).toBeInTheDocument();
   });
   
   test('Should render navbar, copyright and url parser on media player route', () => {
@@ -82,8 +88,11 @@ describe('App', () => {
       </MemoryRouter>
     );
   
-    expect(screen.getByTestId("NavbarMock")).toBeInTheDocument();
-    expect(screen.getByTestId("URLParserMock")).toBeInTheDocument();
-    expect(screen.getByTestId("CopyrightMock")).toBeInTheDocument();
+    const navbar = screen.getByTestId("NavbarMock");
+    const urlParser = screen.getByTestId("URLParserMock");
+    const copyright = screen.getByTestId("CopyrightMock");
+    expect(navbar).toBeInTheDocument();
+    expect(urlParser).toBeInTheDocument();
+    expect(copyright).toBeInTheDocument();
   });
 })

@@ -2,7 +2,7 @@ import React from 'react';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 
-import Dashboard from './Dashboard';
+import Dashboard from './dashboard/Dashboard';
 import { SearchParams } from '../../common/types';
 
 function MediaPlayer(props: SearchParams) {

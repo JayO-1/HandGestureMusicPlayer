@@ -72,3 +72,11 @@ export interface QueueArray {
 export interface FrequencyMap {
     [index: number | string]: number
 }
+
+export interface EndpointURIs {
+    LOGIN: string,
+    REFRESH: string,
+    SEARCH_TRACK: string,
+    ADD_TO_QUEUE: string,
+    GET_PLAYLISTS: string
+}
