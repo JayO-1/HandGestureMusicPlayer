@@ -30,19 +30,20 @@ More details about this project can be found in my [dissertation](https://www.ov
 1. Install Node.js [here](https://nodejs.org/en/download)
 2. Setup a dev account with Spotify [here](https://developer.spotify.com/) and create a new app
 3. Note down your **client ID** and **client secret**
-4. Clone the repo
-5. Switch to the **GestureRecognition** branch
-6. Run `npm install` within **mp-server** and **media-player/src** to install the required dependencies
-7. Replace the `CLIENT_ID` constant under **media-player/src/common/constants.ts** with your client ID
-5. Create a `.env` file under **mp-server**, and populate it as follows:
+4. Add `http://localhost:3000/` and `http://localhost:3000/media-player` to your list of redirect URIs
+5. Clone the repo
+6. Switch to the **GestureRecognition** branch
+7. Run `npm install` within **mp-server** and **media-player/src** to install the required dependencies
+8. Replace the `CLIENT_ID` constant under **media-player/src/common/constants.ts** with your client ID
+9. Create a `.env` file under **mp-server**, and populate it as follows:
 ```
 CLIENT_ID=<your-client-id>
 CLIENT_SECRET=<your-client-secret>
 ```
-6. Run `npm start` within **mp-server**
-7. `npm start` within **media-player/src**
+10. Run `npm start` within **mp-server**
+11. `npm start` within **media-player/src**
 
-Once you complete step 7, you will see this screen:
+Once you complete step 11, you will see this screen:
 
 <img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/Disso%20homepage.png?raw=true" alt="Homepage" width="1000" height="500">
 
