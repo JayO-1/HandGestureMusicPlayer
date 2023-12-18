@@ -44,9 +44,9 @@ describe('Navbar', () => {
     history.push = jest.fn();
 
     render(
-        <Router history={history}>
-            <Navbar authURL={authURL} />
-        </Router>
+    <Router history={history}>
+        <Navbar authURL={authURL} />
+    </Router>
     );
 
     const instructionsButton = screen.getByRole("button", { name: "instructions" });
