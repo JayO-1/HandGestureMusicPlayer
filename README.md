@@ -60,4 +60,4 @@ you will be redirected to the music player:
 
 ## Demo
 
-![Demo](https://github.com/JayO-1/HandGestureMediaPlayer/blob/main/)
+![Demo](https://github.com/JayO-1/HandGestureMediaPlayer/blob/main/images/Disso%20Demo.gif)
