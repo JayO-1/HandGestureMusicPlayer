@@ -1,4 +1,6 @@
 # HandGestureMusicPlayer
+> Music player for Spotify controlled using hand gesture recognition
+
 A music player for Spotify that is controlled using hand gesture recognition, using MediaPipe for hand feature extraction and a simple Neural Network for classification, created with TensorFlow.
 Built for my Final Year Computer Science Dissertation at the University of Manchester.
 
