@@ -53,6 +53,7 @@ function TrackSearchResult(props: Track) {
         component="img"
         sx={{ width: 151 }}
         image={track.albumUrl}
+        alt="no image"
         />
     </Card>
     );

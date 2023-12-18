@@ -43,8 +43,8 @@ function Home(props: AuthURLProps) {
         spacing={3}
         justifyContent="center"
       >
-        <Button variant="contained" color="success" href={ props.authURL }>Login</Button>
-        <Link style={{ textDecoration: "none" }} to="/instructions"><Button variant="outlined">Instructions</Button></Link>
+        <Button aria-label="login" variant="contained" color="success" href={ props.authURL }>Login</Button>
+        <Link style={{ textDecoration: "none" }} to="/instructions"><Button aria-label="instructions" variant="outlined">Instructions</Button></Link>
       </Stack>
     </Container>
   </Box>

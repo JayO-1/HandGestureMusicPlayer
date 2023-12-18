@@ -20,7 +20,7 @@ function Navbar(props: AuthURLProps) {
         size="large"
         edge="start"
         color="inherit"
-        aria-label="menu"
+        aria-label="home"
         sx={{ mr: 2, color: "white" }}
         >
         <HomeIcon />
@@ -29,8 +29,8 @@ function Navbar(props: AuthURLProps) {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Hand Gesture Media Player
         </Typography>
-        <Link style={{ textDecoration: "none", color: "white" }} to="/instructions"><Button color="inherit">Instructions</Button></Link>
-        <Button color="inherit" href={ props.authURL }>Login</Button>
+        <Link style={{ textDecoration: "none", color: "white" }} to="/instructions"><Button aria-label='instructions' color="inherit">Instructions</Button></Link>
+        <Button aria-label='login' color="inherit" href={ props.authURL }>Login</Button>
         </Toolbar>
       </AppBar>
     </Box>
