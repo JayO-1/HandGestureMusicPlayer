@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter, Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 
-import Home from './Home';
+import Home from '../../components/home/Home';
 
 describe('Home', () => {
   test('Should render welcome message, login button and instructions page button', () => {
@@ -53,9 +53,9 @@ describe('Home', () => {
     history.push = jest.fn();
 
     render(
-        <Router history={history}>
-            <Home authURL={authURL} />
-        </Router>
+    <Router history={history}>
+      <Home authURL={authURL} />
+    </Router>
     );
 
     const instructionsButton = screen.getByRole("button", { name: "instructions" });

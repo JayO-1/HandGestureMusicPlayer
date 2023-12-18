@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter, Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 
-import Navbar from './Navbar';
+import Navbar from '../../components/navbar/Navbar';
 
 describe('Navbar', () => {
   test('Should render header, login button and instructions page button', () => {
@@ -45,7 +45,7 @@ describe('Navbar', () => {
 
     render(
     <Router history={history}>
-        <Navbar authURL={authURL} />
+      <Navbar authURL={authURL} />
     </Router>
     );
 

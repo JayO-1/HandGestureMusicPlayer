@@ -3,7 +3,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
 
 import axios from 'axios';
-import Dashboard from './Dashboard';
+import Dashboard from '../../../components/media-player/dashboard/Dashboard';
 
 jest.mock('axios');
 

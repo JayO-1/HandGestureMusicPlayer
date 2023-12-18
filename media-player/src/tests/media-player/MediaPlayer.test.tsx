@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import MediaPlayer from './MediaPlayer';
+import MediaPlayer from '../../components/media-player/MediaPlayer';
 
 jest.mock('./dashboard/Dashboard', () => {
     return {

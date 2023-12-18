@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 
 import { SongSearchResult } from '../../../common/types';
-import TrackSearchResult from './TrackSearchResult';
+import TrackSearchResult from '../../../components/media-player/dashboard/TrackSearchResult';
 
 
 describe('TrackSearchResult', () => {

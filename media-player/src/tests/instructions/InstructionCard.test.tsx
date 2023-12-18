@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 
 import { InstructionStep } from '../../common/types';
-import InstructionCard from './InstructionCard';
+import InstructionCard from '../../components/instructions/InstructionCard';
 
 describe('InstructionCard', () => {
   test('Should render instruction card with image', () => {
