@@ -13,8 +13,8 @@ Contains a Jupyter notebook with some basic experimentation for hand pose estima
 - **Keypoint_model_training.ipynb:** A Jupyter notebook for training the FFNN used for gesture recognition
 - **Keypoint_model_application.ipynb:** A Jupyter notebook for applying the trained FFNN real-time using Mediapipe and OpenCV
 - **model/keypoint_classifier/:** Folder containing the saved weights of the FFNN
-- **media-player/:** Folder containing the media player itself, in the form of a React Web App
-- **mp-server/:** The backend of the media player, where calls are made to the Spotify API for playback control
+- **media-player/:** Folder containing the media player itself, in the form of a _React Web App_
+- **mp-server/:** The backend of the media player, where calls are made to the Spotify API for playback control. Built using _Node.js_ and _Express_
 
 ## System Architecture
 
