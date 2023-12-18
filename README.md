@@ -41,7 +41,7 @@ CLIENT_ID=<your-client-id>
 CLIENT_SECRET=<your-client-secret>
 ```
 10. Run `npm start` within **mp-server**
-11. `npm start` within **media-player/src**
+11. Run `npm start` within **media-player/src**
 
 Once you complete step 11, you will see this screen:
 
