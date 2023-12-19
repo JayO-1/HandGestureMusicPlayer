@@ -18,7 +18,7 @@ Contains a Jupyter notebook with some basic experimentation for hand pose estima
 
 ## System Architecture
 
-<img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/Disso%20Final%20Design.drawio.png?raw=true" alt="Architecture Diagram" width="1000" height="500">
+<img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/images/Disso%20Final%20Design.drawio.png?raw=true" alt="Architecture Diagram" width="1000" height="500">
 
 _Note: Front-end components are numbered in the order the user is expected to interact with them_
 
