@@ -18,7 +18,9 @@ Contains a Jupyter notebook with some basic experimentation for hand pose estima
 
 ## System Architecture
 
-<img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/images/Disso%20Final%20Design.drawio.png?raw=true" alt="Architecture Diagram" width="1000" height="500">
+<p align="center">
+  <img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/images/Disso%20Final%20Design.drawio.png?raw=true" alt="Architecture Diagram" width="1000" height="500" />
+</p>
 
 _Note: Front-end components are numbered in the order the user is expected to interact with them_
 
@@ -47,17 +49,25 @@ CLIENT_SECRET=<your-client-secret>
 
 Once you complete step 11, you will see this screen:
 
-<img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/images/Disso%20homepage.png?raw=true" alt="Homepage" width="1000" height="500">
+<p align="center">
+  <img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/images/Disso%20homepage.png?raw=true" alt="Homepage" width="1000" height="500" />
+</p>
 
 The instructions page will explain how to use the app, and the available gestures can be seen below:
 
-<img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/images/available_hand_gestures-removebg-preview.png?raw=true" alt="Hand Gestures" width="700" height="500">
+<p align="center">
+  <img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/images/available_hand_gestures-removebg-preview.png?raw=true" alt="Hand Gestures" width="700" height="500" />
+</p>
 
 If you wish to skip the instructions and go straight to using the app, simply login to your Spotify account and
 you will be redirected to the music player:
 
-<img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/images/Disso%20Media%20Player%20Page.png?raw=true" alt="Media Player Page" width="900" height="500">
+<p align="center">
+  <img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/images/Disso%20Media%20Player%20Page.png?raw=true" alt="Media Player Page" width="900" height="500" />
+</p>
 
 ## Demo
 
-![Demo](https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/images/Disso%20Demo.gif)
+<p align="center">
+  <img src="https://github.com/JayO-1/HandGestureMusicPlayer/blob/main/images/Disso%20Demo.gif" alt="Demo" />
+</p>
